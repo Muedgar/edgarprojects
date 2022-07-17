@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <audio id="clip1">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
+    <audio id="clip2">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+    </audio>
+    <audio id="clip3">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+    </audio>
+    <audio id="clip4">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+    </audio>
+</head>
+<body>
+    <div class="side-nav">
+      <div class="side-item-container">
+        <div onclick="getPage('one')" class="side-item-image">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 64C0 28.65 28.65 0 64 0H229.5C246.5 0 262.7 6.743 274.7 18.75L365.3 109.3C377.3 121.3 384 137.5 384 154.5V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM336 448V160H256C238.3 160 224 145.7 224 128V48H64C55.16 48 48 55.16 48 64V448C48 456.8 55.16 464 64 464H320C328.8 464 336 456.8 336 448z"/></svg>
+        </div>
+        <div class="side-item-title">
+          <h5>Program Exercise 1</h5>
+        </div>
+      </div>
+
+
+
+      <div class="side-item-container">
+        <div onclick="getPage('two')" class="side-item-image">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 64C0 28.65 28.65 0 64 0H229.5C246.5 0 262.7 6.743 274.7 18.75L365.3 109.3C377.3 121.3 384 137.5 384 154.5V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM336 448V160H256C238.3 160 224 145.7 224 128V48H64C55.16 48 48 55.16 48 64V448C48 456.8 55.16 464 64 464H320C328.8 464 336 456.8 336 448z"/></svg>
+        </div>
+        <div class="side-item-title">
+          <h5>Program Exercise 2</h5>
+        </div>
+      </div>
+
+
+      
+    </div>
+    <div class="simonContainer" style="margin-left: 10vw;">
+        <div class="pieceContainer">
+         <div class="piece piece-1" id="topleft"></div>
+         <div class="piece piece-2" id="topright"></div>
+        </div>
+        <div class="pieceContainer">
+         <div class="piece piece-3" id="bottomleft"></div>
+         <div class="piece piece-4" id="bottomright"></div>
+        </div>
+        <div class="simonGameControlsContainer">
+          <div class="simonGameControls">
+           <div class="simonTextContainer">
+             <h1>Simon</h1>
+             <h5>®</h5>
+           </div>
+   
+           <div class="simonControls">
+             <div class="outputControl">
+               <p id="score" class="turn">--</p>
+             </div>
+             <div class="startControl">
+               <button id="start" class="startButton"></button>
+               <label class="startLabel">START</label>
+             </div>
+             <div class="startControl">
+               <div class="strict"></div>
+               <input type="checkbox" id="strict" class="strictButton"/>
+               <label class="strictLabel">STRICT</label>
+             </div>
+           </div>
+   
+           <div class="gameStartContainer">
+             <h3>OFF</h3>
+             <!-- {/* <div class="gameStartToggle">
+               <div class="gameStartSwitch"></div>
+             </div> */} -->
+             <input type="checkbox" class="strictButton" id="on" />
+             <h3>ON</h3>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="table">
+        <table id="usersTable"></table>
+      </div>   
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="./app.js"></script>
+</body>
+</html>

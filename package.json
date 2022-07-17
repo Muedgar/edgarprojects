@@ -1,0 +1,26 @@
+{
+    "name": "edgarprojects",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "mocha || true"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "mongoose": "^6.4.4",
+        "socket.io": "^4.5.1"
+    },
+    "devDependencies": {
+        "chai": "^4.3.6",
+        "chai-http": "^4.3.0",
+        "mocha": "^10.0.0",
+        "nodemon": "^2.0.19"
+    }
+}
